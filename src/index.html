@@ -4,21 +4,36 @@
         <link rel="stylesheet" href="style/style.css">
     </head>
     <body>
-        <main class="main">
-            <div class="time">
-                <p class="input-value"></p>
-            </div>
-            <form action="" class="form">
-                <input 
-                    type="range" 
-                    class="form__input"
-                    min="0"
-                    max="60"
-                    value="1"
-                    >
-                <button type="button" class="form__button button">go</button>
-            </form>
-        </main>
-        <script src="scripts/main.js"></script>
+        <section class="main-section">
+            <header class="header">
+                <img src="./images/icon.png" alt="sleep timer" class="header__icon">
+                <h1 class="title">Sleep timer by GoPa</h1>
+                <ul class="list-buttons">
+                    <li class="list-buttons_item">
+                        <button type="button" class="titlebar_button" id="minimize-button">—</button>
+                    </li>
+                    <li class="list-buttons_item">
+                        <button type="button" class="titlebar_button" id="close-button">X</button>
+                    </li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="time">
+                    <p class="input-value">1:00</p>
+                </div>
+                <form action="" class="form">
+                    <input 
+                        type="range" 
+                        class="form__input"
+                        min="0"
+                        max="60"
+                        value="1"
+                        >
+                    <button type="button" class="form__button button">Start</button>
+                </form>
+            </main>
+        </section>
+        <script src="./scripts/custom-titlebar.js"></script>
+        <script src="./scripts/main.js"></script>
     </body>
 </html>

@@ -5,12 +5,23 @@ const formInput = window.document.querySelector('.form__input');
 const startButton = window.document.querySelector('.form__button');
 const textTime = window.document.querySelector('.input-value');
 
+let seconds = 59;
+
 function countdownTime() {
-    formInput.value = formInput.value - 1;
-    textTime.textContent = formInput.value + ' min';
 
     if(formInput.value > 0) {
-        setTimeout(() => countdownTime(), 1000);
+        textTime.textContent = `${formInput.value - 1}:${seconds}`;
+
+        setTimeout(() => {
+            if(seconds > 0) {
+                seconds -= 1;
+            } else {
+                formInput.value -= 1;
+                seconds = 60;
+            }
+            
+            countdownTime();
+        }, 1000);
     } else {
         offPC();
     }
@@ -32,4 +43,4 @@ function offPC() {
 }
 
 startButton.addEventListener('click', () => countdownTime(formInput, textTime));
-formInput.addEventListener('mousemove', () => textTime.textContent = formInput.value + ' min');
+formInput.addEventListener('mouseup', () => textTime.textContent = `${formInput.value}:00`);

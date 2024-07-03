@@ -9,7 +9,11 @@
   "author": "George Mikheev",
   "license": "ISC",
   "dependencies": {
+    "custom-electron-titlebar": "^4.2.8",
     "electron": "^30.0.1"
   },
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "electron-builder": "^24.13.3"
+  }
 }
