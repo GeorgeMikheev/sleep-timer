@@ -1,19 +1,29 @@
 {
   "name": "sleep-timer",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a sleep timer written on JavaScript and Electron library",
   "main": "src/index.js",
   "scripts": {
-    "start": "electron . --no-sendbox"
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "author": "George Mikheev",
   "license": "ISC",
   "dependencies": {
     "custom-electron-titlebar": "^4.2.8",
-    "electron": "^30.0.1"
+    "electron-squirrel-startup": "^1.0.1"
   },
   "type": "commonjs",
   "devDependencies": {
-    "electron-builder": "^24.13.3"
-  }
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^30.1.2"
+  } 
 }

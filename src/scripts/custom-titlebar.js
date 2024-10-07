@@ -1,9 +1,9 @@
-const { ipcRenderer } = require('electron');
+const { ipcRenderer } = require("electron");
 
-document.getElementById('close-button').addEventListener('click', () => {
-    ipcRenderer.send('closeApp');
+document.getElementById("close-button").addEventListener("click", () => {
+	ipcRenderer.send("closeApp");
 });
 
-document.getElementById('minimize-button').addEventListener('click', () => {
-    ipcRenderer.send('minimizeApp');
+document.getElementById("minimize-button").addEventListener("click", () => {
+	ipcRenderer.send("minimizeApp");
 });
